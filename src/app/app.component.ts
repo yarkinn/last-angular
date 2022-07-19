@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'last_proj';
+
+  title: string;
+
+  constructor() {
+    this.title = 'Hospital Database Management System';
+  }
 }
