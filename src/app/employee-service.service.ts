@@ -19,4 +19,8 @@ export class EmployeeService {
   public save(employee: Employee) {
     return this.http.post<Employee>(this.empUrl, employee);
   }
+
+  public delete(id: number): Observable<any> {
+    return this.http.delete(`${this.empUrl}/${id}`, { responseType: 'text' });
+  }
 }
